@@ -25,6 +25,5 @@ Development
 
 References
 ====
-* [Python Coding Guidelines](http://web.archive.org/web/20111010053227/
-http://jaynes.colorado.edu/PythonGuidelines.html#module_formatting)
+* [Python Coding Guidelines](http://web.archive.org/web/20111010053227/http://jaynes.colorado.edu/PythonGuidelines.html#module_formatting)
 * [PEP8 Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
