@@ -17,7 +17,7 @@ class TestGiraffe(unittest.TestCase):
         # This tests that the random number is 4
         from src.Giraffe import Giraffe 
         g = Giraffe()
-        self.assertTrue(g.height == 14)
+        self.assertTrue(g.height == 7)
 
 if __name__ == '__main__':
     unittest.main()

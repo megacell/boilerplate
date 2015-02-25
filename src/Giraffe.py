@@ -26,7 +26,7 @@ __author__ = "cathywu"
 
 class Giraffe:
 
-    def __init__(self, height=10, seed=None):
+    def __init__(self, height=3, seed=None):
         self.height = height + random.randint(0,10)
         self.seed = seed
 
