@@ -1,4 +1,4 @@
-#!/usr/bin env python
+#!/usr/bin/env python
 """
 This Giraffe class demonstrates some good practices for structuring research
 code projects. For readability, lines are truncated at 80 characters. For
@@ -14,7 +14,7 @@ More GirASCII [http://www.heartnsoul.com/ascii_art/giraffes.txt]
 """
 
 # IMPORTS
-# Import built-in modules first, followed by third-party modules, followed by 
+# Import built-in modules first, followed by third-party modules, followed by
 # any changes to the path and your own modules.
 import random
 
@@ -49,7 +49,7 @@ class Giraffe:
                     print line,
 
 if __name__ == "__main__":
-    # For reproducible results, set or save your seed to the random number 
+    # For reproducible results, set or save your seed to the random number
     # generator
     import sys
     myseed = random.randint(0, sys.maxint)
