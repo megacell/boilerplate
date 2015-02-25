@@ -21,7 +21,7 @@ import random
 import numpy as np
 
 # Then follows authorship information
-__author__ = "cathywu"
+__author__ = "cathywu, yuanchenyang"
 
 
 class Giraffe:
