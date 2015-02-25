@@ -15,7 +15,7 @@ class TestGiraffe(unittest.TestCase):
 
     def test_height(self):
         # This tests that the random number is 4
-        from src.Giraffe import Giraffe 
+        from boilerplate.Giraffe import Giraffe 
         g = Giraffe()
         self.assertTrue(g.height == 7)
 
