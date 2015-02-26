@@ -27,6 +27,11 @@ To run only the slow (eg. integration) tests:
 
 Development
 ====
+* For this project, and any derived from it, please run the following command
+  from the project root directory:
+
+      ln -s ../../pre-commit.sh .git/hooks/pre-commit
+
 * Please add any additional good practices to this repository.
 * Write unit tests as you go. Document as you go.
 * Run all unit tests before you push any code.
