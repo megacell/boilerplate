@@ -26,17 +26,7 @@ __author__ = "cathywu, yuanchenyang"
 
 class Giraffe:
 
-    def __init__(self, height=3, seed=None):
-        # Store the seed, so if we save the object, we can recover the seed
-        # and reproduce the results; generate a seed if we're not given one
-        if seed is None:
-            import sys
-            self.seed = random.randint(0, sys.maxint)
-        else:
-            self.seed = seed
-        # np.random.seed(self.seed)  # If you're using numpy's random module
-        random.seed(self.seed)
-
+    def __init__(self, height=3):
         # Generate the height of the giraffe
         self.height = height + random.randint(0,10)
 
@@ -62,9 +52,13 @@ class Giraffe:
                     print line,
 
 if __name__ == "__main__":
-    # For reproducible results, set or save your seed to the random number
-    # generator
+    # For reproducible results, set and save your seed to the random number
+    # generator, so we can reproduce the results
+    import sys
+    seed = random.randint(0, sys.maxint)
+    print "Random seed: %s" % seed
+    # np.random.seed(self.seed)  # If you're using numpy's random module
+    random.seed(seed)
 
     g = Giraffe()
     g.draw()
-    print "Random seed: %s" % g.seed
