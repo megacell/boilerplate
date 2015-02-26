@@ -6,7 +6,7 @@ Usage
 ====
 To try out the boilerplate, run
 
-    python src/Giraffe.py
+    python boilerplate/Giraffe.py
 
 But actually the point is to read through `src/Giraffe.py` and
 `tests/fast/test_giraffe.py`.
