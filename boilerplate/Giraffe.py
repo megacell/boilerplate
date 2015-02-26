@@ -27,16 +27,26 @@ __author__ = "cathywu, yuanchenyang"
 class Giraffe:
 
     def __init__(self, height=3, seed=None):
-        self.height = height + random.randint(0,10)
-
         # Store the seed, so if we save the object, we can recover the seed
-        # and reproduce the results
-        self.seed = seed
+        # and reproduce the results; generate a seed if we're not given one
+        if seed is None:
+            import sys
+            self.seed = random.randint(0, sys.maxint)
+        else:
+            self.seed = seed
+        # np.random.seed(self.seed)  # If you're using numpy's random module
+        random.seed(self.seed)
+
+        # Generate the height of the giraffe
+        self.height = height + random.randint(0,10)
 
         # Declare object variables here, even if they aren't initialized here
         self.neck = ''
 
     def draw(self):
+        """
+        Draws the GirASCII
+        """
         neck_detected = False
         with open('data.txt') as in_file:
             for line in in_file:
@@ -54,11 +64,7 @@ class Giraffe:
 if __name__ == "__main__":
     # For reproducible results, set or save your seed to the random number
     # generator
-    import sys
-    myseed = random.randint(0, sys.maxint)
-    # np.random.seed(myseed)  # If you're using numpy's random module
-    random.seed(myseed)
 
-    g = Giraffe(seed=myseed)
+    g = Giraffe()
     g.draw()
     print "Random seed: %s" % g.seed
