@@ -28,22 +28,25 @@ class Giraffe:
 
     def __init__(self, height=3, seed=None):
         self.height = height + random.randint(0,10)
+
+        # Store the seed, so if we save the object, we can recover the seed
+        # and reproduce the results
         self.seed = seed
 
         # Declare object variables here, even if they aren't initialized here
         self.neck = ''
 
     def draw(self):
-        neck = False
+        neck_detected = False
         with open('data.txt') as in_file:
             for line in in_file:
                 if line == '<<<\n':
-                    neck = True
+                    neck_detected = True
                 elif line == '>>>\n':
-                    neck = False
+                    neck_detected = False
                     for i in range(self.height):
                         print self.neck,
-                elif neck:
+                elif neck_detected:
                     self.neck = "%s%s" % (self.neck, line)
                 else:
                     print line,
