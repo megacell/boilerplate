@@ -9,13 +9,21 @@ To try out the boilerplate, run
     python boilerplate/Giraffe.py
 
 But actually the point is to read through `src/Giraffe.py` and
-`tests/test_giraffe.py`.
+`tests/fast/test_giraffe.py`.
     
 Testing
 ====
-To run the unit tests:
+To run the tests:
 
     python -m unittest discover
+
+To run only the fast (eg. unit) tests:
+
+    python -m unittest discover tests/fast
+
+To run only the slow (eg. integration) tests:
+
+    python -m unittest discover tests/slow
 
 Development
 ====
